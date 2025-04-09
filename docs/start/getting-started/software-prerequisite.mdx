@@ -1,0 +1,114 @@
+---
+title: ESP32 软件开发环境安装
+description: 了解如何在 Windows、Mac 和 Linux 上安装和配置 ESP32 开发环境，使用 Arduino IDE 进行编程。
+---
+
+# ESP32 软件开发环境安装
+
+ESP32 是一款功能强大的微控制器，支持 **Wi-Fi 和蓝牙**，广泛用于物联网（IoT）应用。本教程将指导你在 **Windows、macOS 和 Linux** 上安装 **Arduino IDE**，并配置 **ESP32 开发环境**，使其能够编写和上传代码到 ESP32。
+
+---
+
+## 1. 安装 Arduino IDE
+
+### **下载 Arduino IDE**
+在安装 ESP32 之前，需要先安装 **Arduino IDE**。你可以从以下链接下载适用于你的操作系统的版本：
+
+🔗 **[下载 Arduino IDE](https://www.arduino.cc/en/software)**
+
+:::info
+ESP32 开发可使用 **Arduino IDE 1.8.X（经典版）** 或 **Arduino IDE 2.0**。部分 ESP32 插件（如 SPIFFS 文件系统上传工具）尚未在 Arduino 2.0 中完全支持，因此建议安装 **Arduino IDE 1.8.X** 进行开发。
+:::
+
+---
+
+## 2. 在 Arduino IDE 中安装 ESP32 板支持包
+
+### **添加 ESP32 开发板管理器 URL**
+1. **打开 Arduino IDE**，依次点击 **文件 > 首选项**（Windows）或 **Arduino IDE > 首选项**（macOS）。
+2. 在 **“附加开发板管理器 URL”** 栏输入以下地址：
+
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+
+3. 如果你已经添加了 **ESP8266** URL，可以用 **逗号 `,` 分隔多个 URL**：
+
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+4. 点击 **确定** 以保存设置。
+
+---
+
+### **安装 ESP32 板支持包**
+1. **打开开发板管理器**：依次点击 **工具 > 开发板 > 开发板管理器**。
+2. 在搜索栏输入 `ESP32`。
+3. 选择 **"ESP32 by Espressif Systems"**，点击 **安装**。
+4. 等待安装完成，ESP32 开发板支持包已成功添加。
+
+``` <img src={require('./img/esp32-board-manager.png').default} alt="安装 ESP32 板支持包" width="960" />
+
+---
+
+## 3. 安装 ESP32 USB-串口驱动
+
+在某些电脑上，连接 ESP32 时可能无法识别串口，这通常是因为缺少 **CP210x USB to UART** 驱动。
+
+### **Windows**
+1. 访问 [CP210x 驱动下载](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)。
+2. 下载并安装适用于 **Windows 10/11** 的驱动程序。
+
+### **Mac**
+1. 下载 **[macOS 版 CP210x 驱动](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)**。
+2. 安装 `.dmg` 文件后，可能需要前往 **系统设置 > 安全与隐私** 允许驱动运行。
+
+:::info
+如果在 **Arduino IDE > 工具 > 端口** 中未能找到 ESP32，请尝试重新插拔 USB 线，或更换 USB 端口。
+:::
+
+---
+
+## 4. 选择 ESP32 开发板并上传示例代码
+
+### **选择 ESP32 板**
+1. 打开 **Arduino IDE**，点击 **工具 > 开发板**，选择 **你的 ESP32 开发板型号**（如 **DOIT ESP32 DEVKIT V1**）。
+2. 选择 **工具 > 端口**，确保端口名称类似于 `COMX`（Windows）或 `/dev/cu.SLAB_USBtoUART`（Mac）。
+
+---
+
+### **上传示例代码**
+1. 打开示例代码：**文件 > 示例 > WiFi（ESP32）> WiFiScan**。
+2. 点击 **上传** 按钮，等待代码编译并上传到 ESP32。
+3. 打开 **串口监视器**（115200 波特率），ESP32 将扫描周围的 Wi-Fi 网络并打印出来。
+
+``` <img src={require('./img/esp32-upload-code.png').default} alt="上传示例代码到 ESP32" width="960" />
+
+---
+
+## 5. 解决常见问题（故障排除）
+
+### **1️⃣ 无法连接 ESP32**
+如果上传代码时出现错误：
+
+A fatal error occurred: Failed to connect to ESP32: Timed out… Connecting…
+
+解决方案：
+- **按住 BOOT 按钮**，然后点击 **上传**，在看到 **Connecting...** 后松开 BOOT 按钮。
+
+---
+
+### **2️⃣ 端口不可用**
+如果 **工具 > 端口** 为空，尝试：
+- **更换 USB 线**（确保是 **数据线**，而不是仅充电线）。
+- **安装 USB 驱动**（参考上文）。
+- **在设备管理器（Windows）或终端（Mac/Linux）中检查端口是否可见**。
+
+---
+
+## 6. 未来开发方向：ESP32 + AIoT
+
+ESP32 **不仅支持 Arduino IDE**，还可以用于 **MicroPython、ESP-IDF** 进行高级开发，甚至 **连接 OpenAI GPT 模型** 进行 **语音交互和 AIoT 应用**。如果你希望深入探索 ESP32 的 AI 计算能力，可以查看以下内容：
+- **ESP-IDF（Espressif IoT Development Framework）**
+- **TensorFlow Lite for Microcontrollers**
+- **ESP32-S3 + OpenAI Realtime API**
+
+🚀 **ESP32 让 AIoT 设备更加智能，未来可期！**
+
