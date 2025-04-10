@@ -30,6 +30,18 @@ function ProductOverview() {
     <section className={styles.productSection}>
       <div className="container">
         <h2>产品概述</h2>
+        <div>
+          <img
+            src={useBaseUrl('img/ESP32-AIoT.png')}
+            alt="ESP32-AIoT"
+            style={{ width: '100%', maxWidth: '600px', marginBottom: '20px' }}
+          />
+          <img
+            src={useBaseUrl('img/ESP32-AIoT-photo.jpg')}
+            alt="ESP32-AIoT Photo"
+            style={{ width: '100%', maxWidth: '600px' }}
+          />
+        </div>
         <p>
           基于最新 ESP32 S3 芯片，本开发板采用高度集成化设计，将众多常用模块融合在一块电路板上，适配 2.54mm 排针杜邦线与 PH2.0 防反端子，确保可靠接线。经过大量数据调研和对比竞品后，我们发现市面上多数开发板仅支持部分功能，需要额外添购外围模块，而本产品实现了一站式解决方案，极大降低了开发难度和成本。
         </p>
