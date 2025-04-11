@@ -12,7 +12,9 @@ slug: /
 
 ## 什么是 ESP32 和 ESP32-S3？
 
-<img src="image.png" alt="ESP32 示例图片" width="300" />
+![alt text](image-1.png)
+
+<!-- <img src="image.png" alt="ESP32 示例图片" width="300" /> -->
 
 ESP32 和 ESP32-S3 是 **乐鑫科技（Espressif Systems）** 开发的高性能微控制器，因其 **高性能、低功耗和无线连接** 而广泛应用于物联网（IoT）。它们集成了 **Wi-Fi 和 Bluetooth（蓝牙）**，使其成为 **智能家居、工业自动化和 AI 应用** 的理想选择。
 
@@ -40,10 +42,13 @@ ESP32-S3 是 ESP32 系列的最新产品，提供 **AI 加速**、更多 **GPIO 
 
 ## **为什么 Arduino 开发者应该转向 ESP32？**
 
+![alt text](20250130104725.png)
+
 
 
 ### 🚀 **1. 更强的计算性能**
 ESP32 拥有 **240MHz 处理能力**（Arduino UNO 仅 16MHz），可以运行更复杂的逻辑，如 **实时数据处理、信号分析、AI 推理**。
+
 
 ### 📡 **2. 内置 Wi-Fi 和 BLE**
 ESP32 内置 **Wi-Fi 和蓝牙（BLE）**，可以直接连接到物联网平台，如 **MQTT、HTTP、AWS IoT**，而 Arduino 需要额外的 **ESP8266 或 ESP32 模块**。
@@ -54,8 +59,12 @@ ESP32 拥有 **更多 GPIO 引脚、ADC、DAC、触摸传感**，可支持 **更
 ### 🤖 **4. 低功耗，适合物联网（IoT）**
 ESP32-S3 **支持深度睡眠模式（Deep Sleep）**，功耗仅 **几微安**，远低于 Arduino，适用于 **电池供电设备**。
 
+![alt text](1615349cc96eceb4c241d1ac4a948fbb.png)
+
 ### 🧠 **5. AIoT 计算能力**
 ESP32-S3 **内置 VPU（向量处理单元）**，支持 **TensorFlow Lite for Microcontrollers**，可进行 **边缘 AI 计算、语音识别、图像处理**。
+
+![alt text](ESP32_AI.png)
 
 ### 🎙 **6. 支持远程 AI 交互**
 ESP32-S3 还能通过 **Wi-Fi 连接大模型（如 ESP32-Qwen）**，实现 **智能语音交互、AI 对话、智能家居控制**，这是 Arduino 无法实现的。
@@ -92,6 +101,8 @@ ESP32-S3 具备 **向量处理单元（VPU）**，优化了 AI 计算，如：
 - **图像识别**（例如物体检测、人脸识别）
 - **机器学习推理**（支持 **TensorFlow Lite for Microcontrollers**）
 
+![alt text](20250130105855.png)
+
 这使得它成为 **AI 边缘计算** 的强大选择。
 
 ### AIoT 中的边缘计算
@@ -117,6 +128,8 @@ ESP32-S3 **不仅具备本地 AI 计算能力**，还可以通过 **Wi-Fi 接入
 - **边缘计算与云端 AI 结合**：ESP32-S3 可处理 **本地传感数据**，将复杂计算（如 **语音识别、情感分析、任务执行**）交由 **云端大模型** 完成，优化处理效率。
 
 ---
+
+![alt text](20250130105743.png)
 
 ## ESP32 在 AIoT 中的应用场景
 

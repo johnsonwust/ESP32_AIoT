@@ -431,7 +431,7 @@
       type: 'category',
       label: '硬件规格',
       items: [
-        { type: 'doc', id: 'hardware/intro', label: '硬件规格说明1' },
+        { type: 'doc', id: 'hardware/intro', label: '硬件规格说明' },
         //{ type: 'doc', id: 'hardware-specs/spec2', label: '硬件规格说明2' },
         // 添加更多规格说明...
       ],

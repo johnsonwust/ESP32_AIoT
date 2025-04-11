@@ -1,10 +1,11 @@
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
-// 首页头部：标题、标语及快速进入按钮
+// Homepage Header: Title, tagline, and quick link to the docs
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -12,36 +13,37 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">ESP32 S3 开发板</h1>
         <p className="hero__subtitle">
-            AIoT紧跟时代 · 全面一体化 · 接入大模型 · 高效原型验证 · 视频音频
+            AIoT紧跟时代 · 全面一体化 · 接入大模型 · 高效原型验证 · 视频音频输入输出交互
         </p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/intro">
+          <Link className="button button--secondary button--lg" to="/docs/">
             了解更多详情
           </Link>
         </div>
       </div>
     </header>
   );
-}
+} 
 
-// 产品概述：产品背景、整体介绍以及研发调研和竞品分析得出的改进方向
+// Product Overview: Background and introduction to the product, including research insights
 function ProductOverview() {
+  const baseUrl = useBaseUrl('/img/ESP32-AIoT.png'); // Image URL
+  const photoUrl = useBaseUrl('/img/ESP32-AIoT-photo.jpg'); // Additional photo URL
+
   return (
     <section className={styles.productSection}>
       <div className="container">
         <h2>产品概述</h2>
-        <div>
-          <img
-            src={useBaseUrl('img/ESP32-AIoT.png')}
+        <img
+            src={baseUrl}
             alt="ESP32-AIoT"
-            style={{ width: '100%', maxWidth: '600px', marginBottom: '20px' }}
+            style={{ width: '100%', maxWidth: '1200px', marginBottom: '20px' }}
           />
-          <img
-            src={useBaseUrl('img/ESP32-AIoT-photo.jpg')}
+        <img
+            src={photoUrl}
             alt="ESP32-AIoT Photo"
-            style={{ width: '100%', maxWidth: '600px' }}
+            style={{ width: '100%', maxWidth: '1200px' }}
           />
-        </div>
         <p>
           基于最新 ESP32 S3 芯片，本开发板采用高度集成化设计，将众多常用模块融合在一块电路板上，适配 2.54mm 排针杜邦线与 PH2.0 防反端子，确保可靠接线。经过大量数据调研和对比竞品后，我们发现市面上多数开发板仅支持部分功能，需要额外添购外围模块，而本产品实现了一站式解决方案，极大降低了开发难度和成本。
         </p>
@@ -53,7 +55,7 @@ function ProductOverview() {
   );
 }
 
-// 产品优势：从设计理念、集成度、开发效率、扩展性、成本控制等多个角度详细阐述产品优势
+// Product Advantages: Details on the design, integration, development efficiency, expandability, and cost-effectiveness
 function ProductAdvantages() {
   return (
     <section className={styles.productSection}>
@@ -81,7 +83,7 @@ function ProductAdvantages() {
   );
 }
 
-// 内置模块：详细列表展示各模块，并附上简短说明，体现每个模块在实际应用中的重要作用
+// Built-in Modules: Detailed list of modules and their importance in real-world applications
 function ProductModules() {
   return (
     <section className={styles.productSection}>
@@ -117,7 +119,7 @@ function ProductModules() {
   );
 }
 
-// 竞品分析：从市场上其他开发板的局限性出发，说明本产品如何在集成度、易用性、研发效率和成本控制方面脱颖而出
+// Competitive Analysis: Comparison with other boards in the market
 function CompetitiveAnalysis() {
   return (
     <section className={styles.productSection}>
@@ -148,7 +150,7 @@ function CompetitiveAnalysis() {
   );
 }
 
-// 主页面：整合各个部分构建完整的产品介绍页面
+// Main Page: Combining all sections to form a complete product introduction page
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (

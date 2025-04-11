@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+// @ts-ignore
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
@@ -17,15 +17,11 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  url: 'https://esp32.innoelement.org', // 设置网站 URL
+  baseUrl: '/', // 根据需要调整
+  organizationName: 'johnsonwust', // 您的 GitHub 用户名
+  projectName: 'ESP32_AIoT', // 您的仓库名
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'johnsonwust', // Usually your GitHub org/user name.
-  projectName: 'ESP32_AIoT', // Usually your repo name.
 
   onBrokenLinks:  'warn', //'throw',
   onBrokenMarkdownLinks: 'warn',
