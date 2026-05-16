@@ -12,15 +12,15 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'ESP32 AIoT 文档',
+  tagline: 'ESP32 S3 AIoT all-in-one development board documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://esp32.innoelement.org', // 设置网站 URL
-  baseUrl: '/', // 根据需要调整
-  organizationName: 'johnsonwust', // 您的 GitHub 用户名
-  projectName: 'ESP32_AIoT', // 您的仓库名
+  url: 'https://esp32.innoelement.org',
+  baseUrl: '/',
+  organizationName: 'johnsonwust',
+  projectName: 'ESP32_AIoT',
 
 
   onBrokenLinks:  'warn', //'throw',
@@ -44,7 +44,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/johnsonwust/ESP32_AIoT/tree/gh-pages',
+            'https://github.com/johnsonwust/ESP32_AIoT/tree/main',
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +55,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/johnsonwust/ESP32_AIoT/tree/gh-pages',
+            'https://github.com/johnsonwust/ESP32_AIoT/tree/main',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -110,7 +110,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/johnsonwust/ESP32_AIoT/tree/gh-pages',
+            href: 'https://github.com/johnsonwust/ESP32_AIoT',
             label: 'GitHub',
             position: 'right',
           },
@@ -159,7 +159,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} innoelement. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
