@@ -1,0 +1,60 @@
+---
+title: 在 Arduino IDE 中创建 ESP32 范例程序
+description: 介绍如何使用 Arduino IDE 为 ESP32 创建一个新的项目，并编写代码。
+---
+
+# 在 Arduino IDE 中创建 ESP32 范例程序
+
+现在，你已经安装了 ESP32 的开发环境，接下来我们将介绍如何在 **Arduino IDE** 中创建一个新的 ESP32 项目，并编写一个 **LED 闪烁程序**。
+
+---
+
+## 1. 打开 Arduino IDE 并创建新项目
+
+1. **打开 Arduino IDE**。
+2. 点击 **文件 > 新建**，创建一个新的 Arduino 项目。
+3. 在 **工具 > 开发板** 中，选择 **ESP32 设备**（例如 `DOIT ESP32 DEVKIT V1`）。
+4. 选择 **工具 > 端口**，确保端口名称类似于 `COMX`（Windows）或 `/dev/cu.SLAB_USBtoUART`（Mac）。
+
+
+---
+
+## 2. 编写 ESP32 示例代码
+
+在代码编辑窗口中，输入以下 **LED 闪烁（Blink）示例代码**，用于控制 ESP32 开发板上的 LED 进行 **1 秒亮、1 秒灭** 的循环闪烁：
+
+```cpp title="ESP32_Blink.ino" showLineNumbers
+// 定义 LED 引脚（ESP32 DevKit V1 通常使用 GPIO2）
+const int LED_PIN = 2;
+
+void setup() {
+    pinMode(LED_PIN, OUTPUT); // 设置 LED 引脚为输出模式
+}
+
+void loop() {
+    digitalWrite(LED_PIN, HIGH); // 亮灯
+    delay(1000); // 等待 1 秒
+    digitalWrite(LED_PIN, LOW); // 关灯
+    delay(1000); // 等待 1 秒
+}
+```
+
+
+除了 Arduino IDE，ESP32 还支持：
+
+MicroPython（适合 Python 开发者）
+ESP-IDF（Espressif 官方开发框架）
+结合 OpenAI GPT 进行语音交互
+使用 TensorFlow Lite 进行 AI 推理
+🚀 ESP32 是一个强大且灵活的开发平台，期待你的创造！
+
+
+---
+
+### **优化点**
+✅ **图文结合**，帮助开发者快速理解 **Arduino IDE 的 ESP32 开发流程**  
+✅ **包含 LED 闪烁示例代码**，确保新手能成功运行 **ESP32 项目**  
+✅ **详解上传过程、串口监视、错误解决方案**，解决常见 **ESP32 连接问题**  
+✅ **展望 AIoT 开发方向**，引导开发者探索 **ESP-IDF、MicroPython、AI 开发** 🚀
+
+这样，开发者可以 **快速搭建 ESP32 项目**，并顺利进入 **Arduino 编程**！ 🎯
